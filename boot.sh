@@ -11,12 +11,12 @@ export PATH=/usr/sbin:/usr/bin:/sbin:/bin
 # Releases — the aggregated feed (Packages.gz + the *.ipk feed) plus the dropbear_vanilla
 # :2222 lifeline seed. Override for a CDN or dev host, e.g.
 #   SRC=https://archer-boot.pages.dev   or   SRC=http://<dev-host>:8088
-SRC="${SRC:-https://github.com/lee-soft/archer-ax10/releases/latest/download}"
+SRC="${SRC:-https://github.com/barlik/archer-ax10/releases/latest/download}"
 FEED="${FEED:-$SRC}"                          # opkg feed base (Packages.gz + *.ipk)
 # The opkg payload has ONE canonical home: the ax10-opkg repo's "payload" release
 # (install.sh + opt.tar.gz + busybox-armv7l). We fetch install.sh from there and let it
 # pull its own opt.tar.gz/busybox — NOT duplicated into this feed. Override for dev/CDN.
-OPKG_SRC="${OPKG_SRC:-https://github.com/lee-soft/ax10-opkg/releases/latest/download}"
+OPKG_SRC="${OPKG_SRC:-https://github.com/barlik/ax10-opkg/releases/latest/download}"
 PKGS="${PKGS:-ax10-busybox}"                  # installed once opkg is up. Default = opkg + the
                                               # full userland only (no web UI, no debloat). Opt-in extras:
                                               #   opkg install ax10-luci      # LuCI web UI on :8080
