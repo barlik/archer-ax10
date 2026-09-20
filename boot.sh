@@ -1,4 +1,5 @@
 #!/bin/sh
+PKGS="ax10-busybox ax10-debloat"
 # ============================================================
 # Runs ON THE ROUTER at boot, fetched by the openvpn up-hook AFTER WAN is up.
 # boot.sh just BOOTSTRAPS opkg + ssh, then installs the ax10-* packages from the
