@@ -22,7 +22,6 @@ PKGS="${PKGS:-ax10-busybox}"                  # installed once opkg is up. Defau
                                               #   opkg install ax10-luci      # LuCI web UI on :8080
                                               #   opkg install ax10-debloat   # stop TP-Link cloud/phone-home junk
                                               # or bake them in, e.g. PKGS="ax10-busybox ax10-debloat ax10-luci"
-PKGS="ax10-busybox ax10-debloat ax10-luci"
 GET="/usr/bin/curl -4 -L -k -fs"              # -4 -L -k = IPv4, follow redirects, skip cert (no CA bundle / pre-NTP clock)
 
 # self-heal CGNAT DDNS into script mode
